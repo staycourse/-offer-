@@ -1,0 +1,37 @@
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+ //思路比较简单，分类讨论，分为长度为1，0，大于1(首先将最后元素取出，然后插入第一个元素，其他元素都插入第二个位置)
+class Solution {
+public:
+    ListNode* reverseList(ListNode* head) {
+        if(head==NULL)return 0;
+        if(head->next==NULL)return head;
+        ListNode*p=head->next,*m=head;
+        while(p){
+            if(p->next==NULL){
+                m->next=NULL;
+                break;
+            }
+            p=p->next;
+            m=m->next;
+        }
+        ListNode*q=head->next,*n;
+        head->next=NULL;
+        p->next=head;
+        while(q){
+            n=q;
+            q=q->next;
+            n->next=NULL;
+            p->next=n;
+            n->next=head;
+            head=n;    
+        }
+        return p;
+    }
+};
