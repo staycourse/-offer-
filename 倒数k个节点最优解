@@ -1,0 +1,25 @@
+/**
+ * Definition for singly-linked list.
+ * struct ListNode {
+ *     int val;
+ *     ListNode *next;
+ *     ListNode(int x) : val(x), next(NULL) {}
+ * };
+ */
+
+ //定义两个指针计算首尾的位置，让两个指针的距离保持k即可。
+class Solution {
+public:
+    ListNode* getKthFromEnd(ListNode* head, int k) {
+        ListNode*low=head;
+        ListNode*high=head;
+        while(k--){
+            low=low->next;
+        }
+        while(low){
+            low=low->next;
+            high=high->next;
+        }
+        return high;
+    }
+};
