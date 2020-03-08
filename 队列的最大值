@@ -1,0 +1,38 @@
+//双端队列，遇到的值小于双端队列的队尾，把队尾元素弹出。
+class MaxQueue {
+public:
+    MaxQueue() {
+
+    }
+    queue<int>a;
+    deque<int>b;
+    int max_value() {
+       if(!b.empty())return b.front();
+       else return -1; 
+    }
+    
+    void push_back(int value) {
+        a.push(value);
+        while(!b.empty()&&b.back()<value){
+            b.pop_back();
+        }
+        b.push_back(value);
+    }
+    
+    int pop_front() {
+        if(a.empty())return -1;
+        int s=a.front();
+        if(s==b.front())b.pop_front();
+        a.pop();
+        return s;
+        
+    }
+};
+
+/**
+ * Your MaxQueue object will be instantiated and called as such:
+ * MaxQueue* obj = new MaxQueue();
+ * int param_1 = obj->max_value();
+ * obj->push_back(value);
+ * int param_3 = obj->pop_front();
+ */

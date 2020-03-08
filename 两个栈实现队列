@@ -1,0 +1,32 @@
+//一个栈作为输入，另一个作为输出，输出的栈长度不空即可得到。
+class CQueue {
+public:
+    CQueue() {
+
+    }
+    stack<int>a,b;
+    int s;
+    void appendTail(int value) {
+        a.push(value);
+    }
+    int deleteHead() {
+        if(b.empty()){
+            if(a.empty())return -1;
+            while(!a.empty()){
+                b.push(a.top());
+                a.pop();
+            }
+        }
+        s=b.top();
+        b.pop();
+        return s;
+        
+    }
+};
+
+/**
+ * Your CQueue object will be instantiated and called as such:
+ * CQueue* obj = new CQueue();
+ * obj->appendTail(value);
+ * int param_2 = obj->deleteHead();
+ */

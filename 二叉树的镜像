@@ -1,0 +1,26 @@
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     TreeNode *left;
+ *     TreeNode *right;
+ *     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
+ * };
+ */
+
+//主要思路就是遍历左右子树然后交换
+class Solution {
+public:
+    TreeNode* mirrorTree(TreeNode* root) {
+        if(root==NULL)return 0;
+        mirrorTree(root->left);
+        mirrorTree(root->right);
+        return swap(root);     
+    }
+    TreeNode* swap(TreeNode*root){
+        TreeNode*t=root->left;
+        root->left=root->right;
+        root->right=t;
+        return root;
+    }
+};
