@@ -1,0 +1,109 @@
+开始处理请求：
+SignOnController: Received sign on message for processing. 处理接收到的登录信息
+SignOnController: Raw bytes of sign-on message being processed: 登录信息的字节形式
+SignOnController: Received a bootstrapping request. 接收到登录请求
+SignOnBasicController: processBootstrappingRequest of SignOnBasicController got called.
+SignOnBasicController: Bytes of bootstrapping request before parsing:分解之前的登录请求
+SignOnBasicController: Bytes of bootstrappingRequestTlvValue: 登录请求的Tlv值
+SignOnBasicController: Bytes of device identifier received from bootstrapping request: 设备的序列号
+SignOnBasicController: Bytes of device capabilities received from bootstrapping request: 设备的容量
+SignOnBasicController: Bytes of N1pub received from bootstrapping request: 收到的N1pub
+SignOnBasicController: Hex string of signature received from bootstrapping request: 登录请求的签名
+SignOnBasicController: Signature length of bootstrapping request from parse result: 
+SignOnBasicController: Signature payload beginning offset: 2
+SignOnBasicController: Signature payload end offset: 85
+SignOnBasicController: Bytes of signature payload (bytes over which signature was calculated) of bootstrapping request: 
+SignOnBasicControllerECC256: Signature payload:
+SignOnBasicControllerECC256: Signature bytes:
+SignOnBasicControllerECC256: Hex string of signed portion hash:
+SecurityHelpers: Input over which signature is being verified:
+SignOnBasicControllerECC256: SUCCESSFULLY VERIFIED BOOTSTRAPPING REQUEST SIGNATURE 成功验证登录请求的签名
+SignOnBasicController: Hex string of N2pub ASN encoded:
+SignOnBasicController: Hex of received N1pubRaw:
+SignOnBasicController: Hex string of N2pubRaw:
+SignOnBasicControllerBLE: Got a bootstrapping request when mtu was already successfully negotiated for device with mac address 
+SignOnBasicController: Calculating bootstrapping request signature over these bytes:
+SignOnBasicController: Signature calculated for bootstrapping request:
+SignOnBasicControllerBLE: Bytes of constructed bootstrapping request response:
+BLECentralTransport: Send for a characteristic got called.
+BLECentralTransport: sendCode: 1
+BluetoothManager: getConnectionState()
+BluetoothManager: getConnectedDevices
+BLECentralTransport: Call to sendData had length of 124, sending as normal data.
+。。。还有指令，先省略。
+
+SignOnBasicControllerBLE: Successfully sent for sign on basic controller BLE. 成功发送
+SignOnBasicControllerBLE: Bytes sent
+SignOnBasicControllerBLE: Data that got written (hex dump): 
+。。。
+SignOnController: Received sign on message for processing.
+HisiKeyMaster: hisi_km_get_key_characteristics success
+HisiKeyMaster: hisi_km_get_key_characteristics start
+SignOnController: Raw bytes of sign-on message being processed:
+SignOnController: Received a certificate request. 收到证书请求
+SignOnBasicController: processCertificateRequest of SignOnBasicController got called.
+BLEScanner: Post delayed code for handler got triggered.
+。。。
+BLEScanner: Entered the waitForScanInterval function.
+SignOnBasicController: Bytes of certificate request before parsing:
+SignOnBasicController: Bytes of certificateRequestTlvValue:
+SignOnBasicController: Length of signature from parsing certificate request:72
+SignOnBasicController: Value of signature from certificate request:
+SignOnBasicController: Bytes of device identifier received from certificate request: 
+SignOnBasicController: Bytes of N1pub received from certificate request: 
+SignOnBasicController: Bytes of N2 pub digest received from certificate request: 
+SignOnBasicController: Bytes of trust anchor digest received from certificate request: 
+SignOnBasicController: Hex string of signature received from certificate request: 
+SignOnBasicController: Hex string of device identifier received from certificate request interest: 
+SignOnBasicController: Value of parseResult.signatureLength in processCertificateRequest:
+SignOnBasicControllerECC256: Signature payload:
+SignOnBasicControllerECC256: Signature bytes:
+SignOnBasicControllerECC256: Hex string of signed portion hash:
+SecurityHelpers: Input over which signature is being verified:
+SignOnBasicController: N2pub sha256 we calculated:
+SignOnBasicController: N2pub sha256 digest from device
+SignOnBasicController: Generated shared secret:
+SignOnBasicController: constructCertificateRequestResponse of SignOnBasicController got called.
+SignOnBasicController: Hex string of KdPriRawBytes: 
+SignOnBasicController: Hex string of generated KDpubCertificate:
+SignOnBasicController: Hex string of KD public key within KDpubCertificate:
+SignOnBasicController: Hex string of Kd pri: 
+SignOnBasicController: Encrypting Kd pri with this key
+SecurityHelpers: Bytes being encrypted:
+SignOnBasicController: Bytes of encrypted KDpri
+SignOnBasicController: Calculating certificate request signature over these bytes:
+SignOnBasicController: Signature calculated for certificate request:
+SignOnBasicControllerBLE: Bytes of constructed certificate request response
+BLECentralTransport: Send for a characteristic got called.
+BLECentralTransport: sendCode: 1
+...
+SignOnBasicControllerBLE: Successfully sent for sign on basic controller BLE.
+SignOnBasicControllerBLE: Bytes sent
+SignOnBasicControllerBLE: Data that got written (as string):
+SignOnBasicControllerBLE: Data that got written (hex dump):
+...
+BLECentralTransport: Got a notification that a characteristic changed.
+BLECentralTransport: Got notification of change in data transfer characteristic.
+--------------
+SignOnController: Received sign on message for processing.
+SignOnController: Raw bytes of sign-on message being processed:
+SignOnController: Received a finish message. 收到完成消息
+SignOnBasicController: processFinishMessage of SignOnBasicController got called.
+SignOnBasicController: Bytes of finish message before parsing:
+SignOnBasicController: Bytes of finishMessageTlvValue:
+SignOnBasicController: Hex string of signature received from finish message: 
+SignOnBasicController: Hex string of device identifier received from finish message:
+SignOnBasicController: Value of parseResult.signatureLength in processFinishMessage:
+SignOnBasicControllerECC256: Signature payload:
+SignOnBasicControllerECC256: Hex string of signed portion hash: 
+SecurityHelpers: Input over which signature is being verified: 
+SignOnBasicControllerECC256: SUCCESSFULLY VERIFIED FINISH MESSAGE SIGNATURE 成功验证完成消息签名
+SignOnBasicControllerTimer: End of last test (clock time): 2020/01/15 20:37:24
+SignOnBasicControllerTimer: Times for the last sign-on procedure:
+...日志输出时间戳信息
+
+
+认证结束且设备成功登录：
+SignOnController: Successfully onboarded a device with device identifier hex string:
+
+SignOnBasicControllerBLE: Finished processing sign on ble finish message for device with deviceIdentifierHexString: 

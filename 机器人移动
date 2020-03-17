@@ -1,0 +1,27 @@
+
+class Solution {
+public:
+    bool visit[100][100];
+    int movingCount(int m, int n, int k) {
+ /*       
+        int count=0;
+        for(int i=0;i<m;i++){
+            for(int j=0;j<n;j++){
+                count+=dfs(m,n,i,j,k);//将i,j值传入判断函数中，判断是否符合题目要求。
+            }
+        }
+        return count;
+*/
+        return dfs(m,n,0,0,k);//本题中题目中要求从(0,0)开始找，因此不用遍历整个矩阵找满足的点。
+    }
+    int dfs(int m,int n,int i,int j,int k){
+        
+        if(i<0||i>=m||j<0||j>=n||(i/10+i%10+j/10+j%10)>k)return 0;
+        if(visit[i][j]==true)return 0;
+        
+        visit[i][j]=true;
+        int res;
+        res= 1+dfs(m,n,i-1,j,k)+dfs(m,n,i+1,j,k)+dfs(m,n,i,j-1,k)+dfs(m,n,i,j+1,k);
+        return res;
+    }
+};

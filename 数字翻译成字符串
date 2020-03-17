@@ -1,0 +1,14 @@
+//动态规划算法求解，类似于爬楼梯。
+class Solution {
+public:
+    int translateNum(int num) {
+        int dp[1000];
+        string s=to_string(num);
+        dp[0]=1,dp[1]=0;
+        for(int i=2;i<s.size();i++){
+            if(s[i-1] == '0' || s.substr(i-1, 2) > "25")dp[i+1]=dp[i];
+            else dp[i+1]=dp[i-1]+dp[i];
+        }
+        return dp[s.size()];
+    }
+};
