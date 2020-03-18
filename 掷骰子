@@ -1,0 +1,28 @@
+//动态规划，本次出现的次数j由上一轮中的j-1,j-2,j-3,j-4,j-5,j-6之和转化过来。
+class Solution {
+public:
+    vector<double> twoSum(int n) {
+        int dp[13][67];
+        for(int i=0;i<13;i++){
+            for(int j=0;j<67;j++)
+            dp[i][j]=0;
+        }
+        for(int i=1;i<=6;i++)
+        dp[1][i]=1;
+        for(int i=2;i<=n;i++){
+            for(int j=i;j<=6*n;j++){
+                for(int k=1;k<=6;k++){
+                    if(j-k<=0)break;
+                    dp[i][j]+=dp[i-1][j-k];
+                }
+            }
+        }
+        int all=pow(6,n);
+        vector<double>res;
+        for(int i=n;i<=6*n;i++){
+            res.push_back(dp[n][i]/(all*1.0));
+        }
+        return res;
+
+    }
+};

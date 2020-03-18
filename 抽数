@@ -1,0 +1,16 @@
+//巧妙的dp解法。首先确定目标函数的表达式，其次利用三个数值维护。
+class Solution {
+public:
+    int nthUglyNumber(int n) {
+        vector<int>a(n,0);
+        a[0]=1;//初始值设定
+        int t2=0,t3=0,t5=0;
+        for(int i=1;i<n;i++){
+            a[i]=min(a[t2]*2,min(a[t3]*3,a[t5]*5));
+            if(a[i]==a[t2]*2)t2++;
+            if(a[i]==a[t3]*3)t3++;
+            if(a[i]==a[t5]*5)t5++;
+        }
+        return a[n-1];
+    }
+};

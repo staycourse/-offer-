@@ -1,0 +1,36 @@
+//常规方法，超过时间限制
+class Solution {
+public:
+    vector<int> constructArr(vector<int>& a) {
+        vector<int>res;
+        if(a.size()==0)return res;
+        int j=0,r=1;
+        while(j<a.size()){
+            for(int i=0;i<a.size();i++){
+            if(j!=i)r=r*a[i];
+            }
+            res.push_back(r);
+            r=1;
+            j++;
+        }
+        return res;
+    }
+};
+//利用对称关系，经过两遍对称运算就能得到最终的结果。res中首先记录A[i]中左边元素的乘积。之后利用res、计算A[i]中左边元素的乘积。（不太理解！）
+class Solution {
+public:
+    vector<int> constructArr(vector<int>& a) {
+        vector<int>res(a.size(),0);
+        if(a.size()==0)return res;
+        int l=1,r=1;
+        for(int i=0;i<a.size();i++){
+            res[i]=l;
+            l=l*a[i];
+        }
+        for(int i=a.size()-1;i>=0;i--){
+            res[i]=res[i]*r;
+            r=r*a[i];
+        }
+        return res;
+    }
+};

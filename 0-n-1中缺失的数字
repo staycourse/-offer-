@@ -1,0 +1,21 @@
+//注意题中的边界条件。
+class Solution {
+public:
+    int missingNumber(vector<int>& nums) {
+        int len=nums.size();
+        if(len==1){
+            if(nums[0]==0)return 1;
+            else return 0;
+        }
+        if(len==nums[len-1]+1)return len;
+        if(nums[0]!=0)return 0;//注意边界条件
+        int a,c=0;
+        for(int i=1;i<len;i++){
+            if(nums[i]-nums[i-1]!=1){
+                a=nums[i]-1;
+                c++;
+            }
+        }
+        return a;
+    }
+};
