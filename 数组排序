@@ -1,0 +1,22 @@
+//定义新的排序方法，拼接法，具体要看清本质。。。
+class Solution {
+public:
+
+    static bool cmp(string a, string b)
+    {
+        if(a[0] == b[0])
+            return a+b < b+a;
+        return a[0] < b[0];
+    }
+
+    string minNumber(vector<int>& nums) {
+        vector<string>str_nums;
+        for(int i=0;i<nums.size();i++)
+        str_nums.push_back(to_string(nums[i]));
+        sort(str_nums.begin(),str_nums.end(),cmp);
+        string res="";
+        for(int i=0;i<str_nums.size();i++)
+        res+=str_nums[i];
+        return res;
+    }
+};

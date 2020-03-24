@@ -1,0 +1,35 @@
+//借助辅助栈实现，栈顶元素与弹出序列比较
+class Solution {
+public:
+    bool validateStackSequences(vector<int>& pushed, vector<int>& popped) {
+        if(pushed.size()==0&&popped.size()==0)return true;
+        if(popped==pushed)return true;
+        stack<int>s;
+        int i=1,j=0;
+        s.push(pushed[0]);
+        while(i<pushed.size()){
+            if(s.empty()){
+                s.push(pushed[i]);
+                i++;
+            }
+              
+            if(s.top()==popped[j]){
+                j++;
+                s.pop();
+            }
+            else{
+                s.push(pushed[i]);
+                i++;
+            }
+            
+        }
+        while(j<popped.size()){
+            if(s.top()==popped[j]){
+                s.pop();
+            }
+            j++;
+        }
+        if(s.empty())return true;
+        else return false;
+    }
+};

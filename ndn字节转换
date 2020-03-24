@@ -1,0 +1,33 @@
+BleScanAdapter: 定义的厂商数据是十六进制01092002F9AEBB51AA07069C19CCD546BF6C490DED67183A85AE4E
+BleScanAdapter: 转换的厂商数据字节类型[B@3d3628d
+
+定义的厂商数据是十六进制01092002F9AEBB51AA07069C19CCD546BF6C490DED67183A85AE4E
+03-19 12:20:31.605 19891-19891/com.hn.myapplication I/BleScanAdapter: 转换的厂商数据字节类型[B@6f2b54e
+03-19 12:20:31.605 19891-19891/com.hn.myapplication I/BleScanAdapter: ==============TYPE: 0xFF
+03-19 12:20:31.693 19891-19891/com.hn.myapplication I/BleScanAdapter: parseBleADData byteArray length: 62
+03-19 12:20:31.693 19891-19891/com.hn.myapplication I/BleScanAdapter: 定义的厂商数据是十六进制01092002F9AEBB51AA07069C19CCD546BF6C490DED67183A85AE4E
+03-19 12:20:31.693 19891-19891/com.hn.myapplication I/BleScanAdapter: 转换的厂商数据字节类型[B@945d7c3
+03-19 12:20:31.693 19891-19891/com.hn.myapplication I/BleScanAdapter: ==============TYPE: 0xFF
+03-19 12:20:31.767 19891-19891/com.hn.myapplication I/BleScanAdapter: parseBleADData byteArray length: 62
+03-19 12:20:31.767 19891-19891/com.hn.myapplication I/BleScanAdapter: 定义的厂商数据是十六进制01092002F9AEBB51AA07069C19CCD546BF6C490DED67183A85AE4E
+03-19 12:20:31.768 19891-19891/com.hn.myapplication I/BleScanAdapter: 转换的厂商数据字节类型[B@2c925bfb
+03-19 12:20:31.768 19891-19891/com.hn.myapplication I/BleScanAdapter: ==============TYPE: 0xFF
+03-19 12:20:31.946 19891-19891/com.hn.myapplication I/BleScanAdapter: parseBleADData byteArray length: 62
+03-19 12:20:31.946 19891-19891/com.hn.myapplication I/BleScanAdapter: 定义的厂商数据是十六进制01092002F9AEBB51AA07069C19CCD546BF6C490DED67183A85AE4E
+03-19 12:20:31.946 19891-19891/com.hn.myapplication I/BleScanAdapter: 转换的厂商数据字节类型[B@2284f58e
+03-19 12:20:31.946 19891-19891/com.hn.myapplication I/BleScanAdapter: ==============TYPE: 0xFF
+03-19 12:20:32.050 19891-19891/com.hn.myapplication I/BleScanAdapter: parseBleADData byteArray length: 62
+03-19 12:20:32.051 19891-19891/com.hn.myapplication I/BleScanAdapter: 定义的厂商数据是十六进制01092002F9AEBB51AA07069C19CCD546BF6C490DED67183A85AE4E
+03-19 12:20:32.051 19891-19891/com.hn.myapplication I/BleScanAdapter: 转换的厂商数据字节类型[B@37f839bc
+03-19 12:20:32.051 19891-19891/com.hn.myapplication I/BleScanAdapter: ==============TYPE: 0xFF
+03-19 12:20:32.278 19891-19891/com.hn.myapplication I/BleScanAdapter: parseBleADData byteArray length: 62
+03-19 12:20:32.278 19891-19891/com.hn.myapplication I/BleScanAdapter: 定义的厂商数据是十六进制01092002F9AEBB51AA07069C19CCD546BF6C490DED67183A85AE4E
+03-19 12:20:32.279 19891-19891/com.hn.myapplication I/BleScanAdapter: 转换的厂商数据字节类型[B@1c5edc9a
+03-19 12:20:32.279 19891-19891/com.hn.myapplication I/BleScanAdapter: ==============TYPE: 0xFF
+03-19 12:20:32.570 19891-19891/com.hn.myapplication I/BleScanAdapter: parseBleADData byteArray length: 62
+03-19 12:20:32.570 19891-19891/com.hn.myapplication I/BleScanAdapter: 定义的厂商数据是十六进制01092002F9AEBB51AA07069C19CCD546BF6C490DED67183A85AE4E
+03-19 12:20:32.570 19891-19891/com.hn.myapplication I/BleScanAdapter: 转换的厂商数据字节类型[B@174938c1
+03-19 12:20:32.570 19891-19891/com.hn.myapplication I/BleScanAdapter: ==============TYPE: 0xFF
+03-19 12:20:33.210 19891-19891/com.hn.myapplication I/BleScanAdapter: parseBleADData byteArray length: 62
+03-19 12:20:33.210 19891-19891/com.hn.myapplication I/BleScanAdapter: 定义的厂商数据是十六进制01092002F9AEBB51AA07069C19CCD546BF6C490DED67183A85AE4E
+03-19 12:20:33.211 19891-19891/com.hn.myapplication I/BleScanAdapter: 转换的厂商数据字节类型[B@19b40454
