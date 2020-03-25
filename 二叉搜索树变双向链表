@@ -1,0 +1,50 @@
+/*
+//使用树的中序遍历，但是要记录head、pre以便于修改链表指向。同时记住引用的使用。
+class Node {
+public:
+    int val;
+    Node* left;
+    Node* right;
+
+    Node() {}
+
+    Node(int _val) {
+        val = _val;
+        left = NULL;
+        right = NULL;
+    }
+
+    Node(int _val, Node* _left, Node* _right) {
+        val = _val;
+        left = _left;
+        right = _right;
+    }
+};
+*/
+class Solution {
+public:
+    Node* treeToDoublyList(Node* root) {
+        //调用中序遍历函数
+        Node* head=NULL;
+        Node* pre=NULL;
+        if(root==NULL)return {};
+        morder(root,head,pre);
+        head->left = pre;
+        pre->right = head;
+        return head;
+    }
+    void morder(Node* root,Node*& head,Node*& pre){
+        if(root==NULL)return;
+        morder(root->left,head,pre);
+        if(!head){
+            head=root;
+            pre=root;
+        }
+        else{
+            pre->right=root;
+            root->left=pre;
+            pre=root;
+        }
+        morder(root->right,head,pre);
+    }
+};
